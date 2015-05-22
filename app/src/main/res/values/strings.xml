@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">HolaMundo</string>
+
+    <string name="hello_world">Hello Micros!</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- MENU -->
+    <string name="action_search">Buscar</string>
+    <string name="action_dialog">Dialog</string>
+
+
+    <!-- BOTONES -->
+    <string name="action_aceptar">Acepto</string>
+    <string name="action_rechazar">No quiero</string>
+
+    <!-- MAIN -->
+    <string name="main_btn_pulsar">Pulsame!!!!</string>
+    <string name="title_activity_otra">OtraActivity</string>
+    <string name="main_bt_actividad_nueva">Nueva Actividad</string>
+
+    <!-- DETALLE PANTALLA -->
+
+
+    <string name="title_activiti_lista">Listado de PDFs</string>
+
+
+
+
+</resources>
