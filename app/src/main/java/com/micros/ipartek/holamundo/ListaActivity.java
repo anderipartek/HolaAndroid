@@ -26,14 +26,18 @@ public class ListaActivity extends ListActivity {
 
         listValues = new ArrayList<String>();
         listValues.add("Android");
-        listValues.add("iOS");
+        listValues.add("IOS");
         listValues.add("Symbian");
-        listValues.add("Blackberry");
-        listValues.add("Windows Phone");
+        listValues.add("Windows");
+        listValues.add("Ubuntu");
 
         // initiate the listadapter
-        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(this,
-                R.layout.row_layout, R.id.lista_lv, listValues);
+        ArrayAdapter<String> myAdapter = new ArrayAdapter<String>(
+                    this,                   //contexto
+                    R.layout.row_layout,    //layout de la fila
+                    R.id.row_tv,            //elemento de la fila para rellenar
+                    listValues              //listado datos para relleno
+        );
 
         // assign the list adapter
         setListAdapter(myAdapter);
