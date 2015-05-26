@@ -7,11 +7,9 @@
         android:id="@+id/row_tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:hint="Elemento lista"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#ff00ff" />
-
+        android:padding="10dp"
+        android:textColor="@color/abc_primary_text_disable_only_material_dark" />
 
 </LinearLayout>
