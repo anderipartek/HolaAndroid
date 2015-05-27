@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainActivity"
+            android:name=".activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,13 +17,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".OtraActivity"
+            android:name=".activity.OtraActivity"
             android:label="@string/title_activity_otra" >
         </activity>
 
         <activity
-            android:name=".ListaActivity"
+            android:name=".activity.ListaActivity"
             android:label="@string/title_activiti_lista" >
+        </activity>
+
+        <activity
+            android:name=".activity.ListaCustomActivity"
+            android:label="@string/title_activiti_lista_custom" >
         </activity>
     </application>
 

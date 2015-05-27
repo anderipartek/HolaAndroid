@@ -1,4 +1,4 @@
-package com.micros.ipartek.holamundo;
+package com.micros.ipartek.holamundo.activity;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,6 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.micros.ipartek.holamundo.R;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -56,9 +58,9 @@ public class MainActivity extends ActionBarActivity {
         botonActividad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent( context , OtraActivity.class);
-                intent.putExtra(PARAMETRO, "pamaetroMETRO" );
-                intent.putExtra("p2",  2 );
+                Intent intent = new Intent(context, OtraActivity.class);
+                intent.putExtra(PARAMETRO, "pamaetroMETRO");
+                intent.putExtra("p2", 2);
                 startActivity(intent);
             }
         });
@@ -102,6 +104,12 @@ public class MainActivity extends ActionBarActivity {
 
         if ( id == R.id.action_dialog){
             mostrarDialogo();
+        }
+
+
+        if ( id == R.id.action_lista_custom){
+            Intent intent = new Intent(context , ListaCustomActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

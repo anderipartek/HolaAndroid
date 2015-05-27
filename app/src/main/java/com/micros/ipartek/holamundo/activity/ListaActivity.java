@@ -1,4 +1,4 @@
-package com.micros.ipartek.holamundo;
+package com.micros.ipartek.holamundo.activity;
 
 import android.app.ListActivity;
 import android.os.Bundle;
@@ -6,6 +6,8 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
+import com.micros.ipartek.holamundo.R;
 
 import java.util.ArrayList;
 import java.util.List;

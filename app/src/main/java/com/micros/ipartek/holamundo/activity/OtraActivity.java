@@ -1,12 +1,13 @@
-package com.micros.ipartek.holamundo;
+package com.micros.ipartek.holamundo.activity;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+
+import com.micros.ipartek.holamundo.R;
 
 
 public class OtraActivity extends ActionBarActivity {

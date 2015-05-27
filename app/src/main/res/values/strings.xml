@@ -7,11 +7,14 @@
     <!-- MENU -->
     <string name="action_search">Buscar</string>
     <string name="action_dialog">Dialog</string>
+    <string name="action_lista_custom">Lista custom</string>
 
 
     <!-- BOTONES -->
     <string name="action_aceptar">Acepto</string>
     <string name="action_rechazar">No quiero</string>
+
+
 
     <!-- MAIN -->
     <string name="main_btn_pulsar">Pulsame!!!!</string>
@@ -21,7 +24,9 @@
     <!-- DETALLE PANTALLA -->
 
 
-    <string name="title_activiti_lista">Listado de PDFs</string>
+    <string name="title_activiti_lista">Listado Simple</string>
+    <string name="title_activiti_lista_custom">Lista Customizada</string>
+
 
 
 
