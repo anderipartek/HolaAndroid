@@ -5,6 +5,36 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="boton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:background">@color/morau</item>
+        <item name="android:textColor">@color/blanco</item>
+        <item name="android:textSize">50dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="boton.verde">
+        <item name="android:background">@color/verde</item>
+    </style>
+
+    <style name="boton.azul">
+        <item name="android:background">@color/azul</item>
+    </style>
+
+    <style name="boton.gris">
+        <item name="android:background">@color/gris</item>
+    </style>
+
+    <style name="boton.amarillo">
+        <item name="android:background">@color/amarillo</item>
+    </style>
+
+    <style name="boton.rojo">
+        <item name="android:background">@color/rojo</item>
+    </style>
 
 
 

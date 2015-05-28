@@ -26,6 +26,7 @@
 
     <string name="title_activiti_lista">Listado Simple</string>
     <string name="title_activiti_lista_custom">Lista Customizada</string>
+    <string name="title_activity_lista_personalizada">ListaPersonalizadaActivity</string>
 
 
 

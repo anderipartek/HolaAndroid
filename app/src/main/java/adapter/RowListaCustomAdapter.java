@@ -66,29 +66,29 @@ public class RowListaCustomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        View rowView = convertView;
         ViewHolder holder;
 
         // si no existe crear la vista
-        if (rowView == null) {
+        if (convertView == null) {
 
             //obtener el layout
-            rowView = inflater.inflate( R.layout.row_custom_lista, null);
+            convertView = inflater.inflate( R.layout.row_custom_lista, null);
 
             //inicializar holder con las vistas por su id
             holder = new ViewHolder();
-            holder.texto1 = (TextView)rowView.findViewById(R.id.lista_custom_tv_1);
-            holder.texto2 = (TextView)rowView.findViewById(R.id.lista_custom_tv_2);
+            holder.texto1 = (TextView)convertView.findViewById(R.id.lista_custom_tv_1);
+            holder.texto2 = (TextView)convertView.findViewById(R.id.lista_custom_tv_2);
 
             //guardar holder en view
-            rowView.setTag(holder);
-        }
+            convertView.setTag(holder);
 
-        holder = (ViewHolder) rowView.getTag();
+        }else {
+            holder = (ViewHolder) convertView.getTag();
+        }
         //rellenar vistas de la fila
         holder.texto1.setText( data.get(position).getTitulo1() );
         holder.texto2.setText( data.get(position).getTitulo2() );
 
-        return rowView;
+        return convertView;
     }
 }

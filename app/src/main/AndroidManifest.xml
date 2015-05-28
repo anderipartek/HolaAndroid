@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.micros.ipartek.holamundo" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,15 +23,17 @@
             android:name=".activity.OtraActivity"
             android:label="@string/title_activity_otra" >
         </activity>
-
         <activity
             android:name=".activity.ListaActivity"
             android:label="@string/title_activiti_lista" >
         </activity>
-
         <activity
             android:name=".activity.ListaCustomActivity"
             android:label="@string/title_activiti_lista_custom" >
+        </activity>
+        <activity
+            android:name=".activity.ListaPersonalizadaActivity"
+            android:label="@string/title_activity_lista_personalizada" >
         </activity>
     </application>
 

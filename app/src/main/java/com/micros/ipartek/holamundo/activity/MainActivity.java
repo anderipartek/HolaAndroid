@@ -139,4 +139,12 @@ public class MainActivity extends ActionBarActivity {
     }
 
 
+    public void llamarActivityListaCustom(View view) {
+        Intent intent = new Intent(this, ListaPersonalizadaActivity.class);
+        startActivity(intent);
+        Toast toast = Toast.makeText(context, "Llamar Lista Customizada" , Toast.LENGTH_LONG );
+        toast.show();
+    }
+
+
 }
