@@ -35,6 +35,10 @@
             android:name=".activity.ListaPersonalizadaActivity"
             android:label="@string/title_activity_lista_personalizada" >
         </activity>
+        <activity
+            android:name=".activity.PicassoActivity"
+            android:label="@string/title_activity_picasso" >
+        </activity>
     </application>
 
 </manifest>

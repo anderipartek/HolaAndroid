@@ -1,5 +1,6 @@
 package com.micros.ipartek.holamundo.activity;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -14,7 +15,7 @@ import java.util.Date;
 import adapter.ListaPersonalizadaAdaptador;
 import bean.RowBean;
 
-public class ListaPersonalizadaActivity extends ActionBarActivity {
+public class ListaPersonalizadaActivity extends Activity {
 
 
     ListView lista;

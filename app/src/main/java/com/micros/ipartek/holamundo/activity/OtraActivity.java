@@ -1,5 +1,6 @@
 package com.micros.ipartek.holamundo.activity;
 
+import android.app.Activity;
 import android.app.DownloadManager;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -11,7 +12,7 @@ import android.widget.TextView;
 import com.micros.ipartek.holamundo.R;
 
 
-public class OtraActivity extends ActionBarActivity {
+public class OtraActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

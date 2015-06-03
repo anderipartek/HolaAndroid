@@ -39,7 +39,7 @@
         <Button
             style="@style/boton"
             android:text="@string/main_btn_pulsar"
-            android:id="@+id/main_btn_pulsar"
+            android:id="@+id/main_btn_picasso"
            />
 
         <Button
