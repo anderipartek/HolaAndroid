@@ -15,6 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.micros.ipartek.holamundo.R;
+import com.micros.ipartek.holamundo.preferencias.PreferenciasActivity;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -91,8 +92,10 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            Intent intent = new Intent(context , ListaActivity.class);
+
+            Intent intent = new Intent(context , PreferenciasActivity.class);
             startActivity(intent);
+
         }
 
         if (id == R.id.action_search) {
