@@ -35,6 +35,12 @@
             android:textColor="@color/highlighted_text_material_light"
              />
 
+            <Button
+                style="@style/boton.rojo"
+                android:text="@string/main_btn_preferences"
+                android:id="@+id/main_btn_show_preferences"
+                />
+
 
         <Button
             style="@style/boton"

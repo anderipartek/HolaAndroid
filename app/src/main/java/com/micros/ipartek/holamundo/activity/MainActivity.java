@@ -3,9 +3,12 @@ package com.micros.ipartek.holamundo.activity;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -17,12 +20,19 @@ import android.widget.Toast;
 import com.micros.ipartek.holamundo.R;
 import com.micros.ipartek.holamundo.preferencias.PreferenciasActivity;
 
+import java.io.File;
+import java.io.FileOutputStream;
+
 
 public class MainActivity extends ActionBarActivity {
 
     public final static String PARAMETRO = "p1";
+    private static final String TAG = "MainActivity";
+
+
     Button boton;
     Button botonActividad;
+    Button botonPref;
     TextView tvSaludo;
     TextView etSaludo;
 
@@ -39,11 +49,33 @@ public class MainActivity extends ActionBarActivity {
 
         context = getApplicationContext();
 
+
+        //crear un fichero y guardar en la memoria interna
+        saveFile();
+
         boton = (Button) findViewById(R.id.main_btn_pulsar);
         botonActividad = (Button) findViewById(R.id.main_btn_actividad);
+        botonPref = (Button) findViewById(R.id.main_btn_show_preferences);
+
         tvSaludo = (TextView) findViewById(R.id.main_tv_saludo);
         etSaludo = (EditText) findViewById(R.id.main_et_saludo);
 
+
+        // Mostrar preferencias del usuario en Toas
+        botonPref.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //obtener preferencias
+                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+
+                String mensaje="";
+                mensaje = "Texo: " +   sharedPref.getString("edittext_preference","") + " \n";
+                mensaje += "Check: " +   sharedPref.getBoolean("checkbox_preference", false ) + " \n";
+
+                Toast toast = Toast.makeText(context, mensaje , Toast.LENGTH_LONG );
+                toast.show();
+            }
+        });
 
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,7 +104,32 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    private void saveFile() {
 
+        Log.v(TAG, "saveFile inicio");
+        String filename = "myfile";
+        String string = "Hello world!";
+        FileOutputStream outputStream;
+
+        try {
+            outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
+            outputStream.write(string.getBytes());
+            outputStream.close();
+            Log.i(TAG, "Fichero creado " + context.getFilesDir() + " " + filename );
+        } catch (Exception e) {
+            Log.e(TAG, "Excepcion");
+            e.printStackTrace();
+        }
+        Log.v(TAG, "saveFile fin");
+
+    }
+
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+       // getactivit
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

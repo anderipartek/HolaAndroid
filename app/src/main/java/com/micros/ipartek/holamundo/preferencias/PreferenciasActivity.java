@@ -1,6 +1,8 @@
 package com.micros.ipartek.holamundo.preferencias;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceFragment;
 
@@ -27,9 +29,16 @@ public class PreferenciasActivity extends Activity {
             // TODO Auto-generated method stub
             super.onCreate(savedInstanceState);
 
-            // Load the preferences from an XML resource
-            addPreferencesFromResource(R.xml.preferences);
+            // Load the preferencias from an XML resource
+            addPreferencesFromResource(R.xml.preferencias);
+
+
+
+
         }
+
+
+
 
     }
 }

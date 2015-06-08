@@ -39,6 +39,10 @@
             android:name=".preferencias.PreferenciasActivity"
             android:label="@string/title_activity_preferencias" >
         </activity>
+        <activity
+            android:name=".preferencias.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
     </application>
 
 </manifest>
