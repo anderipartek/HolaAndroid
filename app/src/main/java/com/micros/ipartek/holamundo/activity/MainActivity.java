@@ -50,8 +50,7 @@ public class MainActivity extends ActionBarActivity {
         context = getApplicationContext();
 
 
-        //crear un fichero y guardar en la memoria interna
-        saveFile();
+
 
         boton = (Button) findViewById(R.id.main_btn_pulsar);
         botonActividad = (Button) findViewById(R.id.main_btn_actividad);
@@ -70,7 +69,7 @@ public class MainActivity extends ActionBarActivity {
 
                 String mensaje="";
                 mensaje = "Texo: " +   sharedPref.getString("edittext_preference","") + " \n";
-                mensaje += "Check: " +   sharedPref.getBoolean("checkbox_preference", false ) + " \n";
+                mensaje += "Check: " +   sharedPref.getBoolean("checkbox_preference", false) + " \n";
 
                 Toast toast = Toast.makeText(context, mensaje , Toast.LENGTH_LONG );
                 toast.show();
@@ -82,7 +81,8 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
 
                 tvSaludo.setText("Ongi Etorri " + etSaludo.getText());
-
+                //crear un fichero y guardar en la memoria interna
+                saveFile();
 
             }
         });
@@ -104,19 +104,31 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
+    /**
+     * Guarda un fichero de texto en la memoria interna del telefono
+     * Usa el campo de texto del saludo como contenido
+     * nombre del fichero 'myfile.txt'
+     */
     private void saveFile() {
 
         Log.v(TAG, "saveFile inicio");
-        String filename = "myfile";
-        String string = "Hello world!";
+        String filename = "myfile.txt";
+        String contenido = "vacio";
         FileOutputStream outputStream;
 
         try {
+
+            contenido = tvSaludo.getText().toString();
+
             outputStream = openFileOutput(filename, Context.MODE_PRIVATE);
-            outputStream.write(string.getBytes());
+            outputStream.write(contenido.getBytes());
             outputStream.close();
-            Log.i(TAG, "Fichero creado " + context.getFilesDir() + " " + filename );
+            Log.i(TAG, "Fichero creado " + context.getFilesDir() + " " + filename);
+            Toast toast = Toast.makeText(context, "Fichero guardado Memoria interna" , Toast.LENGTH_LONG );
+            toast.show();
         } catch (Exception e) {
+            Toast toast = Toast.makeText(context, "ERROR guardando fichero" , Toast.LENGTH_LONG );
+            toast.show();
             Log.e(TAG, "Excepcion");
             e.printStackTrace();
         }

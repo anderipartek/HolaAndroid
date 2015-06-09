@@ -17,7 +17,7 @@
 
 
     <!-- MAIN -->
-    <string name="main_btn_pulsar">Pulsame!!!!</string>
+    <string name="main_btn_pulsar">Guardar en Memoria</string>
     <string name="main_btn_preferences">Mostrar Preferencias</string>
     <string name="title_activity_otra">OtraActivity</string>
     <string name="main_bt_actividad_nueva">Nueva Actividad</string>
