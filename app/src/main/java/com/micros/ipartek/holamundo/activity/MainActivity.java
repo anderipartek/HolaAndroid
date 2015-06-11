@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.micros.ipartek.holamundo.servicios.MyService;
 import com.micros.ipartek.holamundo.R;
 import com.micros.ipartek.holamundo.preferencias.PreferenciasActivity;
 
@@ -31,6 +32,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     Button boton;
+    Button botonService;
     Button botonActividad;
     Button botonPref;
     TextView tvSaludo;
@@ -55,10 +57,19 @@ public class MainActivity extends ActionBarActivity {
         boton = (Button) findViewById(R.id.main_btn_pulsar);
         botonActividad = (Button) findViewById(R.id.main_btn_actividad);
         botonPref = (Button) findViewById(R.id.main_btn_show_preferences);
+        botonService = (Button) findViewById(R.id.main_btn_service);
 
         tvSaludo = (TextView) findViewById(R.id.main_tv_saludo);
         etSaludo = (EditText) findViewById(R.id.main_et_saludo);
 
+        //llamar actividad del Servicio
+        botonService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, ServiceActivity.class);
+                startActivity(intent);
+            }
+        });
 
         // Mostrar preferencias del usuario en Toas
         botonPref.setOnClickListener(new View.OnClickListener() {
@@ -217,6 +228,7 @@ public class MainActivity extends ActionBarActivity {
         Toast toast = Toast.makeText(context, "Llamar Lista Customizada" , Toast.LENGTH_LONG );
         toast.show();
     }
+
 
 
 }

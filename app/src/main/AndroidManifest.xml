@@ -40,9 +40,26 @@
             android:label="@string/title_activity_preferencias" >
         </activity>
         <activity
-            android:name=".preferencias.SettingsActivity"
-            android:label="@string/title_activity_settings" >
+            android:name=".activity.ServiceActivity"
+            android:label="@string/title_activity_service" >
         </activity>
+
+        <!-- Servicios -->
+
+
+        <!-- soporta multihilos -->
+        <service
+            android:name=".servicios.MyService"
+            android:enabled="true"
+            android:exported="false" > <!-- exported="false" => solo para tu App -->
+        </service>
+
+        <!-- tarea unica -->
+        <service
+            android:name=".servicios.MyIntentService"
+            android:exported="false" >
+        </service>
+
     </application>
 
 </manifest>

@@ -18,6 +18,7 @@
 
     <!-- MAIN -->
     <string name="main_btn_pulsar">Guardar en Memoria</string>
+    <string name="main_btn_service">Servicio</string>
     <string name="main_btn_preferences">Mostrar Preferencias</string>
     <string name="title_activity_otra">OtraActivity</string>
     <string name="main_bt_actividad_nueva">Nueva Actividad</string>
@@ -29,6 +30,7 @@
     <string name="title_activiti_lista_custom">Lista Customizada</string>
     <string name="title_activity_lista_personalizada">ListaPersonalizadaActivity</string>
     <string name="title_activity_preferencias">Preferencias</string>
+    <string name="title_activity_service">ServiceActivity</string>
 
 
 

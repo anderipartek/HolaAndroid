@@ -48,6 +48,13 @@
             android:id="@+id/main_btn_pulsar"
            />
 
+            <Button
+                style="@style/boton.azul"
+                android:text="@string/main_btn_service"
+                android:id="@+id/main_btn_service"
+                />
+
+
         <Button
             android:text="@string/main_bt_actividad_nueva"
             android:id="@+id/main_btn_actividad"
