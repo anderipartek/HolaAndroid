@@ -80,7 +80,7 @@ public class ServiceActivity extends ActionBarActivity {
     protected void onDestroy() {
         super.onDestroy();
         //Cuando la activity es destruida, detenemos el servicio
-        stopService();
+        //stopService();
     }
 
     /**

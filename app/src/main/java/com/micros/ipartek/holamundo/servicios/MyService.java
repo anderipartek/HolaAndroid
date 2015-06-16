@@ -22,6 +22,7 @@ public class MyService extends Service {
     private int seconds = 0;
 
     public MyService() {
+        //siempre hay que definir aunque este vacio
     }
 
 
@@ -51,6 +52,7 @@ public class MyService extends Service {
         if (timer != null)
             timer.cancel();
         super.onDestroy();
+
     }
 
     @Override

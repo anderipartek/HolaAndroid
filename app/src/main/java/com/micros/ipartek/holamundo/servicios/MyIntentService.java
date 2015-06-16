@@ -5,12 +5,17 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 
 import com.micros.ipartek.holamundo.R;
 import com.micros.ipartek.holamundo.activity.MainActivity;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * An {@link IntentService} subclass for handling asynchronous task requests in
@@ -48,6 +53,20 @@ public class MyIntentService extends IntentService {
         }//while
 
 
+        //guardar preferences con fecha actualizacion
+
+            //mascara fecha
+            SimpleDateFormat sdFormat = new SimpleDateFormat("yyyy-MM-dd");
+            String formatted = sdFormat.format( new Date() );
+
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putString( "ultima_actualizacion_preference" , formatted );
+        editor.commit();
+        Log.i(TAG, "Actulizado a fecha " + formatted );
+
+
+        //notificacion
         createNotificaction();
 
 

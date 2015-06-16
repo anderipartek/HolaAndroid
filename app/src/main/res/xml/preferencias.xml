@@ -24,6 +24,22 @@
     </PreferenceCategory>
 
 
+    <PreferenceCategory
+        android:title="Actualizaciones">
 
+        <EditTextPreference
+            android:key="ultima_actualizacion_preference"
+            android:title="ultima actualizacion"
+            android:summary=""
+            android:editable="false"
+            android:dialogTitle="ultima actualizacion" />
+
+        <com.micros.ipartek.holamundo.preferencias.DatePreference
+            android:key="fecha_actualizacion_preference"
+            android:title="Dinos que dias quieres que se actualice"
+            android:defaultValue="2014-08-01"
+            android:summary=""/>
+
+    </PreferenceCategory>
 
 </PreferenceScreen>

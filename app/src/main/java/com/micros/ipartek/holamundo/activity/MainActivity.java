@@ -17,6 +17,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.micros.ipartek.holamundo.servicios.MyIntentService;
 import com.micros.ipartek.holamundo.servicios.MyService;
 import com.micros.ipartek.holamundo.R;
 import com.micros.ipartek.holamundo.preferencias.PreferenciasActivity;
@@ -38,6 +39,8 @@ public class MainActivity extends ActionBarActivity {
     TextView tvSaludo;
     TextView etSaludo;
 
+    SharedPreferences sharedPref;
+
     //contexto de la Actividad
     Context context;
 
@@ -49,8 +52,13 @@ public class MainActivity extends ActionBarActivity {
         //cargar la vista o layout
         setContentView(R.layout.activity_main);
 
+        //contexto
         context = getApplicationContext();
 
+        //obtener preferencias
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+
+        checkActualizaciones();
 
 
 
@@ -75,8 +83,7 @@ public class MainActivity extends ActionBarActivity {
         botonPref.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //obtener preferencias
-                SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+
 
                 String mensaje="";
                 mensaje = "Texo: " +   sharedPref.getString("edittext_preference","") + " \n";
@@ -112,6 +119,25 @@ public class MainActivity extends ActionBarActivity {
 
 
 
+
+    }
+
+    /**
+     * Busca si hay actualizaciones disponibles
+     */
+    private void checkActualizaciones() {
+
+        //nunca se actualizado
+        if ("".equals( sharedPref.getString("ultima_actualizacion_preference","") ) ) {
+
+            Log.i(TAG,"llamar servicio actualizacion");
+            //llamar servicio actualizaciones
+            Intent service = new Intent(this, MyIntentService.class);
+            startService(service);
+
+        }else{
+            Log.i(TAG,"Ya estamos actualizados!!!");
+        }
 
     }
 
