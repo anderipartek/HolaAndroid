@@ -33,6 +33,7 @@ public class MainActivity extends ActionBarActivity {
 
 
     Button boton;
+    Button botonCRUD;
     Button botonService;
     Button botonActividad;
     Button botonPref;
@@ -61,7 +62,7 @@ public class MainActivity extends ActionBarActivity {
         checkActualizaciones();
 
 
-
+        botonCRUD = (Button) findViewById(R.id.main_btn_crud);
         boton = (Button) findViewById(R.id.main_btn_pulsar);
         botonActividad = (Button) findViewById(R.id.main_btn_actividad);
         botonPref = (Button) findViewById(R.id.main_btn_show_preferences);
@@ -69,6 +70,16 @@ public class MainActivity extends ActionBarActivity {
 
         tvSaludo = (TextView) findViewById(R.id.main_tv_saludo);
         etSaludo = (EditText) findViewById(R.id.main_et_saludo);
+
+        //Llamar ala Acvtividad para ejemplo de CRUD
+        botonCRUD.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, CRUDActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         //llamar actividad del Servicio
         botonService.setOnClickListener(new View.OnClickListener() {

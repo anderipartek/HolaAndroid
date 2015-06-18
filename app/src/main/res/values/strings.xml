@@ -31,6 +31,8 @@
     <string name="title_activity_lista_personalizada">ListaPersonalizadaActivity</string>
     <string name="title_activity_preferencias">Preferencias</string>
     <string name="title_activity_service">ServiceActivity</string>
+    <string name="title_activity_crud">Ejemplo CRUD con BBDD</string>
+    <string name="title_activity_crudformulario">CRUDFormularioActivity</string>
 
 
 

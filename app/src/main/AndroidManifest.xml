@@ -60,6 +60,14 @@
             android:exported="false" >
         </service>
 
+        <activity
+            android:name=".activity.CRUDActivity"
+            android:label="@string/title_activity_crud" >
+        </activity>
+        <activity
+            android:name=".activity.CRUDFormularioActivity"
+            android:label="@string/title_activity_crudformulario" >
+        </activity>
     </application>
 
 </manifest>
