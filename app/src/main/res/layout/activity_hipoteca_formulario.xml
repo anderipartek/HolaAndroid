@@ -10,10 +10,28 @@
         android:orientation="vertical"
         android:padding="10dp" >
 
+
+        <Button
+            android:id="@+id/boton_camara"
+            style="@style/boton.azul"
+            android:layout_weight="1"
+            android:textSize="22dp"
+            android:text="Sacar Foto" />
+
+
+        <ImageView
+            android:id="@+id/imagen_camara"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/boton_camara"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"/>
+
         <TextView
             android:id="@+id/label_nombre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/imagen_camara"
             android:text="Nombre"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -21,9 +39,10 @@
             android:id="@+id/nombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
+            android:ems="10"
             android:layout_below="@+id/label_nombre"
-            android:ems="10" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
 
         <TextView
             android:id="@+id/label_condiciones"
@@ -48,7 +67,7 @@
             android:id="@+id/label_contacto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Contacto"
+            android:text="Ruta Imagen"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_below="@+id/condiciones"
             android:layout_marginTop="20dp" />
@@ -117,6 +136,40 @@
             android:ems="10"
             android:inputType="textMultiLine">
         </EditText>
+
+
+        <LinearLayout
+            android:id="@+id/botonera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/observaciones"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/boton_cancelar"
+                style="@style/boton.rojo"
+                android:layout_weight="1"
+                android:textSize="22dp"
+                android:text="Cancelar" />
+
+            <Button
+                android:id="@+id/boton_guardar"
+                style="@style/boton.verde"
+                android:textSize="22dp"
+                android:layout_weight="1"
+                android:text="Guardar" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:layout_alignBottom="@+id/boton_camara"
+            android:layout_alignRight="@+id/label_observaciones"
+            android:layout_alignEnd="@+id/label_observaciones" />
 
     </RelativeLayout>
 </ScrollView>

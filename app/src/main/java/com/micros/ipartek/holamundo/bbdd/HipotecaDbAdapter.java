@@ -1,5 +1,6 @@
 package com.micros.ipartek.holamundo.bbdd;
 
+import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
@@ -83,5 +84,51 @@ public class HipotecaDbAdapter {
         return c;
     }
 
+
+    /**
+     * Inserta los valores en un registro de la tabla
+     */
+    public long insert(ContentValues reg)
+    {
+        if (db == null)
+            abrir();
+
+        return db.insert(C_TABLA, null, reg);
+    }
+
+
+    public long delete(long id){
+        if (db == null)
+            abrir();
+
+        return db.delete(C_TABLA, "_id=" + id, null);
+    }
+
+    /**
+     * Modificar el registro
+     */
+    public long update(ContentValues reg)
+    {
+        long result = 0;
+
+        if (db == null)
+            abrir();
+
+        if (reg.containsKey(C_COLUMNA_ID))
+        {
+            //
+            // Obtenemos el id y lo borramos de los valores
+            //
+            long id = reg.getAsLong(C_COLUMNA_ID);
+
+            reg.remove(C_COLUMNA_ID);
+
+            //
+            // Actualizamos el registro con el identificador que hemos extraido
+            //
+            result = db.update(C_TABLA, reg, "_id=" + id, null);
+        }
+        return result;
+    }
 
 }

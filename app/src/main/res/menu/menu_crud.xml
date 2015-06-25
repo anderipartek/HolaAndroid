@@ -10,5 +10,17 @@
         android:icon="@android:drawable/ic_input_add"
         app:showAsAction="always" />
 
+    <item
+        android:id="@+id/action_editar"
+        android:title="Editar"
+        android:icon="@android:drawable/ic_menu_edit"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/menu_eliminar"
+        android:icon="@android:drawable/ic_menu_delete"
+        app:showAsAction="always"
+        android:title="Eliminar" />
+
 
 </menu>
